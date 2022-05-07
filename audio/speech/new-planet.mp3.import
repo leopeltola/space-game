@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/new-planet.mp3-15cf332150f5444536c04862770661c2.mp3str"
+
+[deps]
+
+source_file="res://audio/speech/new-planet.mp3"
+dest_files=[ "res://.import/new-planet.mp3-15cf332150f5444536c04862770661c2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

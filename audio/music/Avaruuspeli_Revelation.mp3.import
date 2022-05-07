@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Avaruuspeli_Revelation.mp3-e0edcccfa2e880f77c49eaedd3827bc1.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Avaruuspeli_Revelation.mp3"
+dest_files=[ "res://.import/Avaruuspeli_Revelation.mp3-e0edcccfa2e880f77c49eaedd3827bc1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

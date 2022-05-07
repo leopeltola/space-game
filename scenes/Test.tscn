@@ -1,0 +1,264 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://entities/Planet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui/GUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/bg/fog1.png" type="Texture" id=4]
+[ext_resource path="res://art/bg/stars.png" type="Texture" id=5]
+[ext_resource path="res://entities/Asteroid.tscn" type="PackedScene" id=6]
+[ext_resource path="res://entities/Star.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/World.gd" type="Script" id=9]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Star" parent="." instance=ExtResource( 7 )]
+modulate = Color( 1.24, 1.24, 1.24, 1 )
+
+[node name="Planets" type="Node2D" parent="."]
+
+[node name="Planet2" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( 1156, -1083 )
+
+[node name="Planet3" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( 1316, 933 )
+
+[node name="Planet4" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( 1202, 8 )
+
+[node name="Planet5" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( -1431, 21 )
+
+[node name="Planet6" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( -276, -1332 )
+
+[node name="Planet7" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( 30, 1057 )
+
+[node name="Planet8" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( -1033, 747 )
+
+[node name="Planet9" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( -498, -551 )
+
+[node name="Planet10" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( -1196, -900 )
+
+[node name="Planet11" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( 1922, -678 )
+
+[node name="Planet12" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( 1846, 300 )
+
+[node name="Planet" parent="Planets" instance=ExtResource( 1 )]
+position = Vector2( 470, -483 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.5 )
+
+[node name="BG" type="Node2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+
+[node name="Fog1" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( 53, 45 )
+texture = ExtResource( 4 )
+
+[node name="Fog2" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( 589, -412 )
+texture = ExtResource( 4 )
+
+[node name="Fog3" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( -423, -304 )
+texture = ExtResource( 4 )
+
+[node name="Fog4" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( -431, 430 )
+texture = ExtResource( 4 )
+
+[node name="Fog5" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( 1124, 389 )
+texture = ExtResource( 4 )
+
+[node name="Fog6" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( -517, -953 )
+texture = ExtResource( 4 )
+
+[node name="Fog7" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( 361, -681 )
+texture = ExtResource( 4 )
+
+[node name="Fog8" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( 1222, -923 )
+texture = ExtResource( 4 )
+
+[node name="Fog9" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( -1156, 201 )
+texture = ExtResource( 4 )
+
+[node name="Fog10" type="Sprite" parent="ParallaxBackground/ParallaxLayer/BG"]
+position = Vector2( 1643, -576 )
+texture = ExtResource( 4 )
+
+[node name="Stars" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/BG"]
+modulate = Color( 0.494118, 0.454902, 0.396078, 1 )
+margin_left = -1281.0
+margin_top = -1276.0
+margin_right = 1271.0
+margin_bottom = 1077.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 2
+
+[node name="Asteroids" type="Node2D" parent="."]
+
+[node name="Asteroid" parent="Asteroids" instance=ExtResource( 6 )]
+
+[node name="Asteroid2" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 358, -48 )
+
+[node name="Asteroid3" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 489, 244 )
+
+[node name="Asteroid4" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -632, 390 )
+
+[node name="Asteroid5" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -410, 70 )
+
+[node name="Asteroid6" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -322, -162 )
+
+[node name="Asteroid7" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -93, -346 )
+
+[node name="Asteroid8" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 275, -384 )
+
+[node name="Asteroid9" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 376, -107 )
+
+[node name="Asteroid10" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 399, -77 )
+
+[node name="Asteroid11" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 671, -281 )
+
+[node name="Asteroid12" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 638, -523 )
+
+[node name="Asteroid13" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 361, -684 )
+
+[node name="Asteroid14" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -37, -651 )
+
+[node name="Asteroid15" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -307, -578 )
+
+[node name="Asteroid16" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -705, -321 )
+
+[node name="Asteroid17" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -904, 67 )
+
+[node name="Asteroid18" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -445, 402 )
+
+[node name="Asteroid19" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 177, 273 )
+
+[node name="Asteroid20" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 164, 734 )
+
+[node name="Asteroid21" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1152, 74 )
+
+[node name="Asteroid22" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1044, -251 )
+
+[node name="Asteroid23" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 978, -238 )
+
+[node name="Asteroid24" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 419, -689 )
+
+[node name="Asteroid25" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -7, -621 )
+
+[node name="Asteroid26" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 18, -689 )
+
+[node name="Asteroid30" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -484, -1133 )
+
+[node name="Asteroid31" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 75, -1285 )
+
+[node name="Asteroid32" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 69, -1209 )
+
+[node name="Asteroid33" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1053, -961 )
+
+[node name="Asteroid34" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1231, -828 )
+
+[node name="Asteroid35" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 2234, -790 )
+
+[node name="Asteroid36" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 2132, -644 )
+
+[node name="Asteroid37" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1548, -396 )
+
+[node name="Asteroid38" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1732, 118 )
+
+[node name="Asteroid39" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 2088, 264 )
+
+[node name="Asteroid40" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1390, 601 )
+
+[node name="Asteroid41" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1257, 709 )
+
+[node name="Asteroid42" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 1054, 1223 )
+
+[node name="Asteroid43" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 241, 1229 )
+
+[node name="Asteroid44" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 285, 1153 )
+
+[node name="Asteroid45" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -998, 956 )
+
+[node name="Asteroid46" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -1100, 950 )
+
+[node name="Asteroid47" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -1456, 188 )
+
+[node name="Asteroid48" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -1183, -644 )
+
+[node name="Asteroid49" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -491, -1406 )
+
+[node name="Asteroid27" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( -282, -213 )
+
+[node name="Asteroid28" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 424, 709 )
+
+[node name="Asteroid29" parent="Asteroids" instance=ExtResource( 6 )]
+position = Vector2( 890, 475 )

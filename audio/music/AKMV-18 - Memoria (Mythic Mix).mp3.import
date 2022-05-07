@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/AKMV-18 - Memoria (Mythic Mix).mp3-9c2ae322168ea2f3f68304a8840d7a7c.mp3str"
+
+[deps]
+
+source_file="res://audio/music/AKMV-18 - Memoria (Mythic Mix).mp3"
+dest_files=[ "res://.import/AKMV-18 - Memoria (Mythic Mix).mp3-9c2ae322168ea2f3f68304a8840d7a7c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

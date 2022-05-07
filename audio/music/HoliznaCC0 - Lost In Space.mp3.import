@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/HoliznaCC0 - Lost In Space.mp3-00ecd3a82101bef9c0f32316de32e7a5.mp3str"
+
+[deps]
+
+source_file="res://audio/music/HoliznaCC0 - Lost In Space.mp3"
+dest_files=[ "res://.import/HoliznaCC0 - Lost In Space.mp3-00ecd3a82101bef9c0f32316de32e7a5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

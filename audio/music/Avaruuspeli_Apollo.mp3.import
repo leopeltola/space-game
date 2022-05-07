@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Avaruuspeli_Apollo.mp3-5c48c8df3e0a066ab3daac603e8ef00c.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Avaruuspeli_Apollo.mp3"
+dest_files=[ "res://.import/Avaruuspeli_Apollo.mp3-5c48c8df3e0a066ab3daac603e8ef00c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

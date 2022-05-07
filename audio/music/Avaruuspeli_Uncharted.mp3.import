@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Avaruuspeli_Uncharted.mp3-b9dadd30f8ff514ae7279765d3299216.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Avaruuspeli_Uncharted.mp3"
+dest_files=[ "res://.import/Avaruuspeli_Uncharted.mp3-b9dadd30f8ff514ae7279765d3299216.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

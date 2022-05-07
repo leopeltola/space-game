@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://art/planets/gaia_l.png" type="Texture" id=1]
+[ext_resource path="res://entities/Planet.gd" type="Script" id=2]
+[ext_resource path="res://art/planets/l_normal-sheet.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 509.0
+
+[sub_resource type="CircleShape2D" id=204]
+resource_local_to_scene = true
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id=205]
+resource_local_to_scene = true
+radius = 40.0125
+
+[node name="Planet" type="StaticBody2D" groups=["planet"]]
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="BuildArea" type="Area2D" parent="."]
+collision_layer = 2048
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildArea"]
+visible = false
+shape = SubResource( 204 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Planet" type="Sprite" parent="."]
+modulate = Color( 0.866667, 0.866667, 0.866667, 1 )
+light_mask = 2
+texture = ExtResource( 1 )
+normal_map = ExtResource( 3 )
+hframes = 50
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 205 )
+
+[node name="AnimTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="AnimTimer" to="." method="_on_AnimTimer_timeout"]
